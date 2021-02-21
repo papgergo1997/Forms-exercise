@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, timeout } from 'rxjs/operators';
 import { EventService } from 'src/app/service/event.service';
 import { Event } from 'src/app/model/event';
 import { NgForm } from '@angular/forms';
@@ -38,12 +38,14 @@ export class EventEditorComponent implements OnInit {
       this.eventService.update(event).subscribe(
         ev => this.router.navigate([''])
       );
+      this.toaster.info('You have successfully updated your event!',);
+    } else {
+      this.submitted = true;
+      this.eventService.create(event).subscribe(
+        ev => this.router.navigate([''])
+      );
+      this.toaster.success('You have successfully created a new event!',);
     }
-    this.submitted = true;
-    this.eventService.create(event).subscribe(
-      ev => this.router.navigate([''])
-    );
-    this.toaster.success('You have successfully created a new event!');
   }
 
 }
