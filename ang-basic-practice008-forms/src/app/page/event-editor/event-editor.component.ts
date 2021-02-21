@@ -38,13 +38,13 @@ export class EventEditorComponent implements OnInit {
       this.eventService.update(event).subscribe(
         ev => this.router.navigate([''])
       );
-      this.toaster.info('You have successfully updated your event!',);
+      this.toaster.info('You have successfully updated your event!', 'Updated', { timeOut: 3000 });
     } else {
       this.submitted = true;
       this.eventService.create(event).subscribe(
         ev => this.router.navigate([''])
       );
-      this.toaster.success('You have successfully created a new event!',);
+      this.toaster.success('You have successfully created a new event!', 'Created', { timeOut: 3000 });
     }
   }
 

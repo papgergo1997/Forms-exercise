@@ -22,7 +22,7 @@ export class EventsListComponent implements OnInit {
 
   onDelete(event: Event): void {
     this.eventService.remove(event).subscribe();
-    this.toaster.warning('You have successfully deleted an event')
+    this.toaster.warning('You have successfully deleted an event', 'Deleted', { timeOut: 3000 })
     this.eventList = this.eventService.getAll();
   }
 
