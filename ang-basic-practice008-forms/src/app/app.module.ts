@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { EventsListComponent } from './page/events-list/events-list.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
 import { EventEditorComponent } from './page/event-editor/event-editor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { EventEditorComponent } from './page/event-editor/event-editor.component
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
 
   ],
   providers: [],

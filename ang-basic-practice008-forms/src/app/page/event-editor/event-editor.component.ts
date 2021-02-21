@@ -6,6 +6,8 @@ import { EventService } from 'src/app/service/event.service';
 import { Event } from 'src/app/model/event';
 import { NgForm } from '@angular/forms';
 import { Location } from 'src/app/model/location';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-event-editor',
@@ -25,6 +27,7 @@ export class EventEditorComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private eventService: EventService,
     private router: Router,
+    private toaster: ToastrService
   ) { }
 
   ngOnInit(): void { }
@@ -40,7 +43,7 @@ export class EventEditorComponent implements OnInit {
     this.eventService.create(event).subscribe(
       ev => this.router.navigate([''])
     );
-
+    this.toaster.success('You have successfully created a new event!');
   }
 
 }
