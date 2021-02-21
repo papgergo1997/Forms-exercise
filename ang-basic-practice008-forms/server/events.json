@@ -76,6 +76,17 @@
         "city": "Szilvásvárad",
         "country": "HUNGARY"
       }
+    },
+    {
+      "id": 8,
+      "name": "Kutykiállítás",
+      "date": "8/26/2022",
+      "time": "8am",
+      "location": {
+        "address": "1. Park Str.",
+        "city": "Szilvásvárad",
+        "country": "HUNGARY"
+      }
     }
   ]
 }
