@@ -65,6 +65,17 @@
         "city": "Szilvásvárad",
         "country": "HUNGARY"
       }
+    },
+    {
+      "id": 7,
+      "name": "Karácsonyi ünnepség",
+      "date": "12/25/2020",
+      "time": "1pm",
+      "location": {
+        "address": "8. Miskolci Str.",
+        "city": "Szilvásvárad",
+        "country": "HUNGARY"
+      }
     }
   ]
 }
